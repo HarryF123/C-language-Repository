@@ -1,0 +1,186 @@
+
+#include "stdio.h"
+
+int main()
+{
+	int shape;
+	int phase;
+    
+    int yesNo = 1;
+    
+while(yesNo == 1)
+{
+	float r = 0;
+	float b = 0;
+	float h = 0;
+	float w = 0;
+	float a = 0;
+	float A = 0;
+
+	phase = 0;
+
+	puts("Area Calculator for Various Shapes");
+
+	puts("1: Triangle");
+	puts("2: Rectangle");
+	puts("3: Trapezium");
+	puts("4: Ellipse");
+	puts("5: Square");
+	puts("6: Parallelogram");
+	puts("7: Circle");
+	puts("8: Sector of a Circle");
+
+
+	printf("Enter your choice of shape: ");
+	scanf("%d", &shape);
+
+	if (phase < 2)
+	switch (shape)
+	{
+     case 1:
+	 {
+		 puts("You Picked Triangle");
+		 puts("Please Enter Dimensions Below");
+
+		 printf("Enter Base: ");
+		 scanf("%f", &b);
+
+		 printf("Enter Vertical Height: ");
+		 scanf("%f", &h);
+		 
+		 float areatri = ((0.5*b)*h);
+
+	     printf("Area of Triangle: %.2f \n", areatri);
+	     
+	     break;
+	}
+
+		
+	 case 2:
+	 {
+		 puts("You Picked Rectangle");
+		 puts("Please Enter Dimensions Below");
+
+		 printf("Enter Width: ");
+		 scanf("%f", &w);
+
+		 printf("Enter Height: ");
+		 scanf("%f", &h);
+
+		 float arearec = (w * h);
+
+		 printf("Area of Rectangle: %.2f \n", arearec);
+
+		 break;
+	 }
+
+	 case 3:
+	 {
+		 puts("You Picked Trapezium");
+		 puts("Please Enter Dimensions Below");
+
+		 printf("Enter Base/Width: ");
+		 scanf("%f", &b);
+
+		 printf("Enter Second Width: ");
+		 scanf("%f", &a);
+
+		 printf("Enter Vertical Height: ");
+		 scanf("%f", &h);
+
+		 float areatra = (0.5 * (a + b) * h);
+
+		 printf("Area of Trapezium: %.2f \n", areatra);
+
+		 break;
+	 }
+
+	 case 4:
+	 {
+		 puts("You Picked Ellipse");
+		 puts("Please Enter Dimensions Below");
+
+		 printf("Enter Major Axis (Half the Width): ");
+		 scanf("%f", &b);
+
+		 printf("Enter Minor Axis (Half the Height): ");
+		 scanf("%f", &a);
+
+		 float areael = (3.14*a*b);
+
+		 printf("Area of Ellipse: %.2f \n", areael);
+
+		 break;
+	 }
+
+	 case 5:
+	 {
+		 puts("You Picked Square");
+		 puts("Please Enter Dimensions Below");
+
+		 printf("Enter Height/Base: ");
+		 scanf("%f", &a);
+
+		 float areasq = (a * a);
+
+		 printf("Area of Square: %.2f \n", areasq);
+
+		 break;
+	 }
+
+	 case 6:
+	 {
+		 puts("You Picked Parallelogram");
+		 puts("Please Enter Dimensions Below");
+
+		 printf("Enter Base: ");
+		 scanf("%f", &b);
+
+		 printf("Enter Vertical Height: ");
+		 scanf("%f", &h);
+
+		 float areapar = (b * h);
+
+		 printf("Area of Parallelogram: %.2f \n", areapar);
+
+		 break;
+	 }
+
+	 case 7:
+	 {
+		 puts("You Picked Circle");
+		 puts("Please Enter Dimensions Below");
+
+		 printf("Enter Radius: ");
+		 scanf("%f", &r);
+
+		 float areacir = (3.14*(r * r));
+
+		 printf("Area of Circle: %.2f \n", areacir);
+
+		 break;
+	 }
+
+	 case 8:
+	 {
+		 puts("You Picked Sector of a Circle");
+		 puts("Please Enter Dimensions Below");
+
+		 printf("Enter Radius: ");
+		 scanf("%f", &r);
+
+		 printf("Enter Angle of Sector in Radians: ");
+		 scanf("%f", &A);
+
+
+		 float areasec = (0.5 * (r * r) * A);
+
+		 printf("Area of Triangle: %.2f \n", areasec);
+
+		 break;
+	 }
+	}
+
+	return 0;
+ }
+}
